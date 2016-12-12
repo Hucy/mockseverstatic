@@ -1,13 +1,13 @@
 <template>
 <el-menu default-active="1" class="top-menu" mode="horizontal" @select="handleSelect">
-  <el-menu-item index="1" >处理中心</el-menu-item>
-  <el-submenu index="2">
-    <template slot="title">我的工作台</template>
-    <el-menu-item index="2-1">选项1</el-menu-item>
-    <el-menu-item index="2-2">选项2</el-menu-item>
-    <el-menu-item index="2-3">选项3</el-menu-item>
+  <el-menu-item index="1" >数据总览</el-menu-item>
+  <el-menu-item index="2">数据统计</el-menu-item>
+    <el-submenu index="3">
+    <template slot="title">设置中心</template>
+    <el-menu-item index="3-1">全局配置</el-menu-item>
+    <el-menu-item index="3-2">标签</el-menu-item>
+    <el-menu-item index="3-3">关于</el-menu-item>
   </el-submenu>
-  <el-menu-item index="3">订单管理</el-menu-item>
 </el-menu>
 </template>
 <script>

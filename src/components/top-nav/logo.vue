@@ -1,7 +1,7 @@
 <template>
       <div class="logo-wrap" @click = 'logoClickHandle'>
-            <img src="../../static/api.svg" alt="">
-            <img src="../../static/json.svg" alt="">
+            <img src="../../../static/api.svg" alt="">
+            <img src="../../../static/json.svg" alt="">
     </div>
 </template>
 <script>
