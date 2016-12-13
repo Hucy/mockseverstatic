@@ -1,5 +1,5 @@
 <template>
-       <el-row type='flex' justify="center"  align="middle" class="edit-content">
+       <el-row type='flex' justify="center"  align="top" class="edit-content">
         <el-col :span="4" :push=".5">
           
         <LeftSlide></LeftSlide>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-    import LeftSlide from './left-slide'
-    import MiddleInfo from './middle-info'
-    import RightEdit from './right-edit'
+    import LeftSlide from './left-slide/left-slide'
+    import MiddleInfo from './middle-info/middle-info'
+    import RightEdit from './right-edit/right-edit'
     export default {
         components: {
             LeftSlide,
@@ -30,6 +30,6 @@
 </script>
 <style scoped>
     .edit-content{
-        height:100%;
+        height:90%;
     }
 </style>

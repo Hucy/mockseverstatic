@@ -14,10 +14,9 @@
   }
 </script>
 <style scoped>
-        .logo-wrap {
-        height: 80px;
-        line-height:80px;
-       
+      .logo-wrap {
+        height: 100%;
+       padding-top: 5%;
     }
     
     .logo-wrap img {

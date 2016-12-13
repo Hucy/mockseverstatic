@@ -24,7 +24,11 @@
 </script>
 <style scoped>
     .top-nav{
-        /*height:80px;*/
         box-shadow: 0 0 4px rgba(0,0,0,0.25);
+        height:10%;
+        min-height: 60px;
+    }
+    .top-nav .el-col:first-child{
+            height: 100%;
     }
 </style>
