@@ -37,34 +37,128 @@
                     name: "标签",
                 }],
                 lastList: [{
-                    id: "1",
+                    id: "x1",
                     des: "xxx",
                     url: "xxx",
-                    lastTime: 'ss',
+                    lastTime: '2016-12-14 14:36',
                     lastChangeUser: '',
+                    tagList: [{
+                        key: 1,
+                        type: "gray",
+                        name: "标签一",
+                    }, {
+                        key: 2,
+                        type: "success",
+                        name: "标签",
+                    }, {
+                        key: 3,
+                        type: "success",
+                        name: "标签",
+                    }],
                     params: [{
                         key: 'xx',
                         value: "xx",
-                        des: ''
+                        des: '11'
                     }, {
                         key: 'xx',
                         value: "xx",
-                        des: ''
+                        des: '11'
                     }]
                 }, {
-                    id: "1",
+                    id: "x2",
                     des: "xxx",
                     url: "xxx",
-                    lastTime: 'ss',
-                    lastChangeUser: '',
+                    lastTime: '2016-12-14 14:36',
+                    lastChangeUser: '12',
+                    tagList: [{
+                        key: 1,
+                        type: "gray",
+                        name: "标签一",
+                    }, {
+                        key: 2,
+                        type: "success",
+                        name: "标签",
+                    }],
                     params: [{
                         key: 'xx',
                         value: "xx",
-                        des: ''
+                        des: '12'
                     }, {
                         key: 'xx',
                         value: "xx",
-                        des: ''
+                        des: '22'
+                    }]
+                }, {
+                    id: "x2",
+                    des: "xxx",
+                    url: "xxx",
+                    lastTime: '2016-12-14 14:36',
+                    lastChangeUser: '12',
+                    tagList: [{
+                        key: 1,
+                        type: "gray",
+                        name: "标签一",
+                    }, {
+                        key: 2,
+                        type: "success",
+                        name: "标签",
+                    }],
+                    params: [{
+                        key: 'xx',
+                        value: "xx",
+                        des: '12'
+                    }, {
+                        key: 'xx',
+                        value: "xx",
+                        des: '22'
+                    }]
+                }, {
+                    id: "x2",
+                    des: "xxx",
+                    url: "xxx",
+                    lastTime: '2016-12-14 14:36',
+                    lastChangeUser: '12',
+                    tagList: [{
+                        key: 1,
+                        type: "gray",
+                        name: "标签一",
+                    }, {
+                        key: 2,
+                        type: "success",
+                        name: "标签",
+                    }],
+                    params: [{
+                        key: 'xx',
+                        value: "xx",
+                        des: '12'
+                    }, {
+                        key: 'xx',
+                        value: "xx",
+                        des: '22'
+                    }]
+                }, {
+                    id: "x2",
+                    des: "xxx",
+                    url: "xxx",
+                    lastTime: '2016-12-14 14:36',
+                    lastChangeUser: '12',
+                    tagList: [{
+                        key: 1,
+                        type: "gray",
+                        name: "标签一",
+                    }, {
+                        key: 2,
+                        type: "success",
+                        name: "标签",
+                    }],
+                    params: [{
+                        key: 'xx',
+                        value: "xx",
+                        des: '12'
+                    }, {
+                        key: 'xx',
+                        value: "xx",
+                        des: '22'
                     }]
                 }]
             }
@@ -77,5 +171,8 @@
     }
 </script>
 <style scoped>
-
+    .left-slide {
+        height: 90%;
+        padding-top: 10%;
+    }
 </style>

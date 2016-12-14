@@ -29,7 +29,11 @@
     }
 </script>
 <style scoped>
-    .edit-content{
-        height:90%;
+    .edit-content {
+        height: 90%;
+    }
+    
+    .edit-content .el-col {
+        height: 100%;
     }
 </style>
