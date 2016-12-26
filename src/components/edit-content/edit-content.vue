@@ -4,11 +4,11 @@
           
         <LeftSlide></LeftSlide>
         </el-col>
-        <el-col :span="9" >
+        <el-col :span="12" >
           
            <MiddleInfo></MiddleInfo>
         </el-col>
-        <el-col :span="10"  :pull=".5">
+        <el-col :span="7"  :pull=".5">
 
         <RightEdit></RightEdit>
         </el-col>
