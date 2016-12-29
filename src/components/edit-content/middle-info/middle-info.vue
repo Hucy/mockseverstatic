@@ -1,7 +1,7 @@
 <template>    
     <div class = 'middle-info'>
-        <ParamDetail :param-detail='paramDetail'></ParamDetail>
-        <MainInfo :main-info='mainInfo'></MainInfo>     
+        <ParamDetail :param-detail='paramDetail' @edit = 'editParamHandle'></ParamDetail>
+        <MainInfo :main-info='mainInfo'></MainInfo>  
     </div>
 </template>
 
@@ -75,7 +75,7 @@
                     url: 'xxx',
                     des: 'xxx',
                     lastTime: '2016-12-14 14:36',
-                    lastChangeUser: '',
+                    lastChangeUser: 'uanhsksh',
                     params: [{
                         key: 'xx',
                         value: "xx",
@@ -114,9 +114,19 @@
         components: {
             MainInfo,
             ParamDetail
+        },
+        methods: {
+            editParamHandle(key) {
+                console.log(key)
+            },
+            editInfoHandle(key) {
+                consoole.log(key)
+            }
         }
     }
 </script>
 <style scoped>
-
+    .middle-info {
+        padding: 20px 30px;
+    }
 </style>
