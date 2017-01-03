@@ -1,6 +1,7 @@
 <template>
     <div class="main-info">
-       <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+       <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" :render-content='renderContent'
+       :highlight-current='true'></el-tree>
     </div>      
 </template>
 <script>
@@ -8,26 +9,40 @@
         data() {
             return {
                 data: [{
-                    label: '一级 2',
+                    label: 'article',
+                    value: '',
                     children: [{
-                        label: '二级 2-1',
-                        children: [{
-                            label: '二级 2-1',
-                            children: [{
-                                label: '二级 2-1',
-                                children: [{
-                                    label: '二级 2-1'
-                                }, {
-                                    label: '二级 2-2'
-                                }]
-                            }, {
-                                label: '二级 2-2'
-                            }]
-                        }, {
-                            label: '二级 2-2'
-                        }]
+                        label: 'title',
+                        value: 'article 路由'
                     }, {
-                        label: '二级 2-2'
+                        label: 'description',
+                        value: 'article 接口信息配置'
+                    }, {
+                        label: 'type',
+                        value: 'object'
+                    }, {
+                        label: 'properties',
+                        value: '',
+                        children: [{
+                            label: 'code',
+                            value: '',
+                            children: [{
+                                label: 'title',
+                                value: '返回代码'
+                            }, {
+                                label: 'description',
+                                value: '服务器返回代码'
+                            }, {
+                                label: 'type',
+                                value: 'integer'
+                            }, {
+                                label: 'minimum',
+                                value: 0
+                            }, {
+                                label: 'maximum',
+                                value: 10
+                            }, ]
+                        }]
                     }]
                 }],
                 defaultProps: {
@@ -37,8 +52,15 @@
             };
         },
         methods: {
-            handleNodeClick(data) {
-                console.log(data);
+            handleNodeClick(data, node, content) {
+
+                console.log(node)
+                    // console.log(node.parent.label);
+                    // console.log(content)
+
+            },
+            renderContent: function(h, node) {
+                return h('span', [h('i', node.data.label), h('i', node.data.value !== "" ? ':' + node.data.value : "")])
             }
         }
     };
