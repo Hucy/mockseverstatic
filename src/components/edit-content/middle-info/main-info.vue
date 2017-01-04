@@ -53,25 +53,34 @@
         },
         methods: {
             handleNodeClick(data, node, content) {
-
-                console.log(node)
-                    // console.log(node.parent.label);
-                    // console.log(content)
+                this.$emit('edit', node)
 
             },
             renderContent: function(h, node) {
-                return h('span', [h('i', node.data.label), h('i', node.data.value !== "" ? ':' + node.data.value : "")])
+                return h('span', {
+                    "class": {
+                        'node-label': true
+                    }
+                }, [h('i', node.data.label), h('i', node.data.value !== "" ? ':' + node.data.value : "")])
             }
         }
     };
 </script>
-<style scoped>
+<style>
     .main-info {
         margin-top: 10px;
     }
     
-    .el-tree {
+    .main-info .el-tree {
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .12), 0px 0px 6px 0px rgba(0, 0, 0, .04);
         border-radius: 3px;
+    }
+    
+    .main-info .el-tree .node-label i:first-child {
+        color: #475669
+    }
+    
+    .main-info .el-tree .node-label i:last-child {
+        font-style: normal;
     }
 </style>

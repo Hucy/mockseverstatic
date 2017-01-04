@@ -1,7 +1,7 @@
 <template>    
     <div class = 'middle-info'>
         <ParamDetail :param-detail='paramDetail' @edit = 'editParamHandle'></ParamDetail>
-        <MainInfo :main-info='mainInfo'></MainInfo>  
+        <MainInfo :main-info='mainInfo' @edit = 'editTreeNodeHandle' ></MainInfo>  
     </div>
 </template>
 
@@ -120,7 +120,10 @@
                 console.log(key)
             },
             editInfoHandle(key) {
-                consoole.log(key)
+                console.log(key)
+            },
+            editTreeNodeHandle(node) {
+                console.log(node)
             }
         }
     }

@@ -1,17 +1,20 @@
 <template>
     <div class="left-slide">
         <TopSearch></TopSearch>
-        <LastList  :tag-list = 'tagList' :last-list="lastList" @tag-close = 'tagCloseHandle'></LastList>
+        <NewItem @click.native='newHandle'></NewItem>
+        <LastList  :tag-list = 'tagList' :last-list="lastList" @tag-close = 'tagCloseHandle' @item-click='itemCilckHandle'></LastList>
     </div>
 </template>
 
 <script>
     import TopSearch from './top-search'
     import LastList from './last-list'
+    import NewItem from './new-item'
     export default {
         components: {
             TopSearch,
-            LastList
+            LastList,
+            NewItem
         },
         data() {
             return {
@@ -166,6 +169,12 @@
         methods: {
             tagCloseHandle(tag) {
                 this.tagList.splice(this.tagList.indexOf(tag), 1);
+            },
+            newHandle() {
+                console.log('new')
+            },
+            itemCilckHandle(id) {
+                console.log(id)
             }
         }
     }

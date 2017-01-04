@@ -11,7 +11,7 @@
         <el-button type="primary" :icon="showType?'fa el-icon-fa-th-large':'fa el-icon-fa-th-list'" size = "small" @click="showListTypeHandle"></el-button>
     </div>
     <ul :class="showType?'type-block':'type-list'" class="last-list-wrap">
-        <ListItem v-for ='item in lastList ' :item = 'item' :show-type =' showType' :ref ="item.id"></ListItem>
+        <ListItem v-for ='item in lastList ' :item = 'item' :show-type =' showType' :ref ="item.id" @click.native = 'itemHandle(item.id)'></ListItem>
     </ul>
   </div>
 </template>
@@ -38,6 +38,9 @@
             },
             showListTypeHandle() {
                 this.showType = !this.showType
+            },
+            itemHandle(id) {
+                this.$emit('item-click', id)
             }
         }
     }
