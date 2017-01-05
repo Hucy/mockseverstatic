@@ -9,8 +9,8 @@
         data() {
             return {
                 data: [{
-                    label: 'article',
-                    value: '',
+                    label: '',
+                    value: 'article',
                     children: [{
                         label: 'title',
                         value: 'article 路由'
@@ -21,11 +21,11 @@
                         label: 'type',
                         value: 'object'
                     }, {
-                        label: 'properties',
-                        value: '',
+                        label: '',
+                        value: 'properties',
                         children: [{
-                            label: 'code',
-                            value: '',
+                            label: '',
+                            value: 'code',
                             children: [{
                                 label: 'title',
                                 value: '返回代码'
@@ -61,7 +61,7 @@
                     "class": {
                         'node-label': true
                     }
-                }, [h('i', node.data.label), h('i', node.data.value !== "" ? ':' + node.data.value : "")])
+                }, [h('i', node.data.label !== "" ? node.data.label + ":" : ""), h('i', node.data.value)])
             }
         }
     };
