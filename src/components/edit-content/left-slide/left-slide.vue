@@ -181,7 +181,7 @@
 </script>
 <style scoped>
     .left-slide {
-        height: 90%;
-        padding-top: 10%;
+        height: 93%;
+        padding-top: 7%;
     }
 </style>
