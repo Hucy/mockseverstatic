@@ -1,7 +1,7 @@
 <template>
     <div class="edit-comb">
         <div class="node-handle">
-           <span>ss</span>
+           <span>{{editKey}}</span>
            <el-button type="warning" icon="fa el-icon-fa-trash-o" size="small" @click='removeNode'>移除</el-button>
         </div>
         <div class="edit-wrap">
@@ -16,7 +16,7 @@
     import TypeSync from './sub-edit/type-sync'
     import TypeRadio from './sub-edit/type-radio'
     export default {
-        props: ['editType'],
+        props: ['editType','editKey'],
         components: {
             TypeSync,
             TypeRadio

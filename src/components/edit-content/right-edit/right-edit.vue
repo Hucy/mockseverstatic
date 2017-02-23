@@ -5,7 +5,7 @@
             <el-col :span='15' > <TopFilter @filter='filterHandle'></TopFilter></el-col>
             <el-col :span='9'  > <HandleButton @save='saveHandle' @undo='undoHandle'></HandleButton></el-col>
         </el-row>    
-        <EditComb edit-type="radio"></EditComb>
+        <EditComb edit-type="radio" edit-key="ss"></EditComb>
     </div>
 
 </template>
