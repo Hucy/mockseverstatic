@@ -10,12 +10,12 @@
         <p>约束条件：</p>
         <div class="optional-list">
           <p>可选：</p>
-          <el-tag v-for = ' optional in optionalList' @click.native.stop
- ='addOptionHandle(optional)' >{{optional}} <i class="el-icon-plus"></i></el-tag>
+          <el-tag v-for = ' optional in optionalList'>{{optional}} <i class="el-icon-plus" @click.stop
+ ='addOptionHandle(optional)'></i></el-tag>
         </div>
         <div class="selected-list">
            <p>已选：</p>
-          <el-tag v-for = '(optional,key) in choosedList'  closable='true' @close ='removeOptionHandle(key)' >{{optional}}</el-tag>
+          <el-tag v-for = '(optional,key) in choosedList'  :closable='true' @close ='removeOptionHandle(key)' >{{optional}}</el-tag>
         </div>
       </div>
     </div>
